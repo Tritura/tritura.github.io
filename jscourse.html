@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript</title>
+    <script>
+      window.onload = function() {
+        var submitButton = 
+        document.getElementById("btnSubmit");
+        submitButton.addEventListener("click", greetUser);
+      }
+      var x = 1;
+      var y;
+      function greetUser() {
+        var name = document.getElementById("name").value;
+        //document.getElementById("output").innerHTML = "<h1>Howdy, " + name + "</h1>";
+        
+        if (x % 5 == 0 & x % 3 == 0) {
+          y = 'fiz buzz';
+        } else if (x % 5 == 0) {
+          y = 'buzz';
+        } else if (x % 3 == 0) {
+          y = 'fiz';
+        } else {
+          y = x;
+        }
+        x++;
+        document.getElementById("output").innerHTML = "<h1>" + y + "</h1>";
+      }
+    </script>
+    
+  </head>
+  <body>
+    <label for = "name">Name:</label>
+    <input type = "text" id = "name" />
+    <button type = "submit" id = "btnSubmit">Submit</button>
+    <div id = "output"></div>
+    
+  </body>
+  
+</html>
