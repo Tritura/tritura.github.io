@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="kjd" />
+
+<meta name="date" content="2018-04-18" />
+
+<title>Algorithm Basics</title>
+
+<script src="https://tritura.github.io/p5.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+  <style>
+    .cent {
+      width: 50%;
+      margin: 0 auto;
+    }
+</style>
+
+
+
+</head>
+
+<body>
+
+
+
+
+<div class="container-fluid main-container">
+
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Algorithm Basics</h1>
+<h4 class="author"><em>Kenny</em></h4>
+<h4 class="date"><em>August 12, 2018</em></h4>
+
+</div>
+
+
+<p>Algorithm Basics</p>
+
+<p>In the world we now live in you don’t have to look very far to see algorithms in use. You will probably also see just as many discussions about how to make them accountable, their transparency, whether they are biased and will they displace certain jobs.</p>
+
+<p>Some of these are fairly difficult questions to answer, and some are actually pretty new questions to even think about. Before looking into some of those more complicated questions we should take a few steps back and ask what are algorithms? What are they used for? When did we start using them?</p>
+
+<p>So what is an algorithm? The definition can be fairly simple, but you can also find more complex discussions. Essentially an algorithm is a process that accepts both an input and an initial state and walks through a set of steps that will eventually terminate by producing a result. If you have ever followed a recipe to bake a cake you have used an algorithm, albeit a fairly simple one. You start with an input, your ingredients, and are in a state of having no cake, you follow each step and in the end you have a cake. However your cake may not look as good as the one in the picture, it also may not taste as good. SOme of this is because humans are not the best at following these instructions as precise as needed. Computers on the other hand are very good at doing things in a precise manner, even though it may still be hard for them to crack an egg.</p>
+
+<p>The next question about what they are used for has no limit to its scope. They are used to determine where medical students do their residency, matching people up in the online dating world, moving vast swathes of money everyday buying and selling finanial instruments, the list is essentially endless and continues to grow. Algorithms are not a fancy new creation though, Euclid’s greatest common divisor algorithm has been around for over 2000 years. What is new is how much of our lives have become digitized and the number of computers we can employ to run these alogorithms.</p>
+
+<p>For centuries the only people who made any use of algorithms were mathematicians for tasks such as finding roots to equations and many other mathematical tasks such as finding the greatest common divisor discussed above. In <a href="https://en.wikipedia.org/wiki/Analytical_Engine">1837</a> Charles Babbage descibed what he called the analytical engine, it was essentially a computer and the next logical step after his difference engine which was a mechanical caclualter. However it was never completed. In <a href="https://en.wikipedia.org/wiki/Universal_Turing_machine">1936</a> Alan Turing created the concept of the universal turing machine, which sets the theoretical stage for what it means to be a computer and compute things. Sometime during that period the notion of computers became a real a real thing. It also turns out that computers are really good at following a set of procedures to take some input and turn it into an output.</p>
+
+<p>Algorithms are key part of the foundation of computer science. Early computers were used for the few things were digitized, mostly realted to money, science and military. They did things like sort numbers and find optimal combinations of items, a majority of computing time has been used for sort and linear programming. But as computers became cheaper more and more data started to be stored in them. Then more and more algorithms were devised to perform all sorts of tasks on this data. Now they could just as easily help you find a date as matching you up with a organ transplant. They also do things that people used to do, like determining prison sentences and what news you see on a day to day basis. They actually determine more than just the news you see, from the decade old Netflix prize that paid $1 million to the first group to increase the performance of their movie recommendation algorithm by 10% to the ads that pop up in your browser that are purchesed at spot market prices in real time.</p>
+
+
+
+<p>To get an understanding we can look at a very simple but common algorithm, sort. This is actaully an example fo bubble sort. A lot of the actual work of computers is just focuesed on this problem, sorting things. By sorting we that we have a set of things and they need to be placed in order based on some criteria, that could be the cost, of televisions in an online store or the cost of various plane tickets. You can easily search through them and see where thay start to go outside of your price range. In the app below items are initially somewhat random. If you click in the app it will perform one of the comparisons needed to sort all of the items. Think of this like one of  the steps in making the cake from above. This can continue until all items are sorted. The computer does not need you to click but that lets you see more of what is happening instead of seeing them all in perfect order as the computer could do this in less time that it takes you to blink.</p>
+
+
+
+
+
+  <div><iframe src="sort.html" width="1050" height="500"></iframe></div>
+
+
+<p>Somewhere in the history of algorithms a change happened. This sorting algorithm can be read and understood, it was also created by a person who thought long and hard how to solve a given problem (or maybe in a flash of insight). Another type of algorithm came into existence, those that start with some sort of ramdomness. Alos those  that require some human input to get started, and then those that require data which may already be biased, among others</p>
+
+
+<div style="text-align:center;"> <iframe src="https://darrkj.shinyapps.io/chull/" width="730" height="600"></iframe></div>
+
+
+<p>When we sorted numbers they had a defninte order to them, and aside from teh algorithm itself there was very little in terms of choices needed to be made. When we get into machine learning we see a big difference, you have to make a few choices and they results are not completely known.</p>
+
+  <div class = "cent"><iframe src="kmeans.html" width="400" height="300"></iframe></div>
+
+<p>Why did I choose three clusters, if you refresh you may end up in a different bucket, etc.</p>
+
+
+
+<p>The main issue of understanding these algorithms comes up without having to go very deep into their construction. That is that they are actually not one just an algorithm but an infinite number of them. A common family of machine learning algorithms is known as supersived learning algorithms. These are called supervised because they use something called a target to train a process to learn this set of inputs in some optimal way. SO given a set of data and the target for each you get another algorithm that can predict or classify new similar items. For example you may have a collection of mortgages. You could break them into two groups, those that defaulted and those that did not. For each of the mortgages and the associated target you have many other pieces of information, the age, credit score, education level, marital status, and ay number of other features about each mortgage. The supervised learning algorithm will take the inputs and devise a process to take new incoming mortgages and return a result of whether they will default or not. That predication could be right or wrong about either option it went with.</p>
+
+
+<p>The supervised here is different from unsupervised learning where there is not target and the goal is more to learn the latent structure, or reinforment learning where cost function is used in place of a target, or semisupervised where we have some labels in some cases but not all.</p>
+
+
+<p>Any change to the input data, their order, an assocaited target or the number of them you ahve can cahnge the outcome. So there is one algorithm that was used to train on, which created what is usually called a model, an standin for how the real world works, and this model is itself an algorthm for taking new observations and making predictions, and then there are an infinite number of other algorithms that you could ahve created with any number of modifications to the training process. Drawing the dividing line between the main two algorithms is not a simple process, even experts can have differing thoughts on where this boundary is drawn.</p>
+
+<p>Another complexity is that if you take an algorithm that takes a number as an input and returns a numebr as an output and then consider two of these interfaced at the input/output you have an algorithm.</p>
+<p>Machine learning algorithms often make a few tradeoffs. These come in the form of many different parameters you can optimize. If you think about an algorithm as taking some input data and then returnig a yes or no output that will be fed to some decsion process you have many options, much less if you consider more complicated results that are not binary. The algorithm, and probably any person, cannot get every observation correct, at least if it is doing anything that is not trivial. Many will want the algorithm to perform as well as possible. If the only acceptable result is perfection, then you are going down a path destined for failure.</p>
+
+</div>
+
+
+
+</body>
+</html>
